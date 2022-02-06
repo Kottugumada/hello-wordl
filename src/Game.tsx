@@ -30,7 +30,7 @@ interface GameProps {
   keyboardLayout: string;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
+const targets = targetList.slice(0, targetList.indexOf("####") + 1); // Words no rarer than this one
 const minLength = 4;
 const maxLength = 11;
 
@@ -38,7 +38,7 @@ function randomTarget(wordLength: number): string {
   const eligible = targets.filter((word) => word.length === wordLength);
   let candidate: string;
   do {
-    candidate = pick(eligible);
+    candidate = "myra";
   } while (/\*/.test(candidate));
   return candidate;
 }
